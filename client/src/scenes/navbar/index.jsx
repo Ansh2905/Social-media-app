@@ -24,9 +24,11 @@ import { useDispatch, useSelector } from "react-redux";
 import { setMode, setLogout } from "state";
 import { useNavigate } from "react-router-dom";
 import FlexBetween from "components/FlexBetween";
+import ProfileWidget from "scenes/widgets/ProfileWidget";
 
 const Navbar = () => {
   const [isMobileMenuToggled, setIsMobileMenuToggled] = useState(false);
+  const { _id, picturePath } = useSelector((state) => state.user);
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const user = useSelector((state) => state.user);
@@ -58,19 +60,7 @@ const Navbar = () => {
         >
           StudentSearch
         </Typography>
-        {isNonMobileScreens && (
-          <FlexBetween
-            backgroundColor={neutralLight}
-            borderRadius="9px"
-            gap="3rem"
-            padding="0.1rem 1.5rem"
-          >
-            <InputBase placeholder="Search..." />
-            <IconButton>
-              <Search />
-            </IconButton>
-          </FlexBetween>
-        )}
+      
       </FlexBetween>
 
       {/* DESKTOP NAV */}
@@ -107,6 +97,9 @@ const Navbar = () => {
               <MenuItem onClick={() => dispatch(setLogout())}>Log Out</MenuItem>
             </Select>
           </FormControl>
+          <Box flexBasis={isNonMobileScreens ? "26%" : undefined}>
+            <ProfileWidget userId={_id} picturePath={picturePath} />
+          </Box>
         </FlexBetween>
       ) : (
         <IconButton

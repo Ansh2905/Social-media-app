@@ -61,13 +61,13 @@ const MyPostWidget = ({ picturePath }) => {
     <WidgetWrapper>
       <FlexBetween gap="1.5rem">
         <InputBase
-          placeholder="Enter Text"
+          placeholder="Share a college-related experience!"
           onChange={(e) => setPost(e.target.value)}
           value={post}
           sx={{
             width: "100%",
             backgroundColor: palette.neutral.light,
-            borderRadius: "2rem",
+            borderRadius: "1rem",
             padding: "1rem 2rem",
           }}
         />
@@ -139,7 +139,7 @@ const MyPostWidget = ({ picturePath }) => {
             borderRadius: "3rem",
           }}
         >
-          POST
+          Share
         </Button>
       </FlexBetween>
     </WidgetWrapper>

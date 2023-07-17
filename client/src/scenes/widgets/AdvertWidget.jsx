@@ -12,16 +12,16 @@ const AdvertWidget = () => {
     <WidgetWrapper>
       <FlexBetween marginBottom="20px">
         <Typography color={dark} variant="h5" fontWeight="500">
-          Sponsorsed by:
+          Sponsored by:
         </Typography>
       </FlexBetween>
-      <a href="https://www.xlabhinnovations.com/">
+      <a href="https://open.spotify.com/">
         <img
           width="100%"
           height="auto"
           alt="advert"
-          src="http://localhost:3001/assets/XLabhLogo.gif"
-          style={{ borderRadius: "0.75rem", margin: "0.75rem 0" }}
+          src="http://localhost:3001/assets/spotify.png"
+          style={{ border: "0", borderRadius: "0.75rem", margin: "0.75rem 0" }}
         />
       </a>
     </WidgetWrapper>

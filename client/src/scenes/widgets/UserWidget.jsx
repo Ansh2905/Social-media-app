@@ -1,8 +1,5 @@
 import {
-  ManageAccountsOutlined,
   EditOutlined,
-  LocationOnOutlined,
-  WorkOutlineOutlined,
 } from "@mui/icons-material";
 import { Box, Typography, Divider, useTheme } from "@mui/material";
 import UserImage from "components/UserImage";
@@ -43,8 +40,6 @@ const UserWidget = ({ userId, picturePath }) => {
     lastName,
     location,
     occupation,
-    viewedProfile,
-    impressions,
     friends,
   } = user;
 
@@ -75,7 +70,7 @@ const UserWidget = ({ userId, picturePath }) => {
             <Typography color={medium}>{friends.length} connections</Typography>
           </Box>
         </FlexBetween>
-        <ManageAccountsOutlined />
+
       </FlexBetween>
 
       <Divider />
@@ -83,20 +78,18 @@ const UserWidget = ({ userId, picturePath }) => {
       {/* SECOND ROW */}
       <Box p="1rem 0">
         <Box display="flex" alignItems="center" gap="1rem" mb="0.5rem">
-          <img src="../assets/city.png" alt="location" height="30px"/>
+          <img src="../assets/city.png" alt="facebook" height="30px"/>
           <Typography color={medium}>{location}</Typography>
         </Box>
         <Box display="flex" alignItems="center" gap="1rem">
-          <img src="../assets/study.png" alt="major" height="30px"/>
+        <img src="../assets/study.png" alt="facebook" height="30px"/>
           <Typography color={medium}>{occupation}</Typography>
         </Box>
       </Box>
 
       <Divider />
 
-      <Divider />
-
-      {/* THIRD ROW */}
+      {/* FOURTH ROW */}
       <Box p="1rem 0">
         <Typography fontSize="1rem" color={main} fontWeight="500" mb="1rem">
           Socials
@@ -111,43 +104,40 @@ const UserWidget = ({ userId, picturePath }) => {
               </Typography>
             </Box>
           </FlexBetween>
-          <EditOutlined sx={{ color: main }} />
         </FlexBetween>
 
         <FlexBetween gap="1rem" mb="0.5rem">
           <FlexBetween gap="1rem">
-            <img src="../assets/twitter.png" alt="twitter" height="30px"/>
+            <img src="../assets/twitter.png" alt="twitter" width="30px"/>
             <Box>
               <Typography color={main} fontWeight="500">
                 Twitter
               </Typography>
             </Box>
           </FlexBetween>
-          <EditOutlined sx={{ color: main }} />
+        
         </FlexBetween>
 
         <FlexBetween gap="1rem">
           <FlexBetween gap="1rem">
-            <img src="../assets/linkedin.png" alt="linkedin" height="30px"/>
+            <img src="../assets/linkedin.png" alt="linkedin" width="30px"/>
             <Box>
               <Typography color={main} fontWeight="500">
                 LinkedIn
               </Typography>
             </Box>
           </FlexBetween>
-          <EditOutlined sx={{ color: main }} />
         </FlexBetween>
 
         <FlexBetween gap="1rem">
           <FlexBetween gap="1rem">
-            <img src="../assets/instagram.png" alt="instagram" height="30px"/>
+            <img src="../assets/instagram.png" alt="instagram" width="30px"/>
             <Box>
               <Typography color={main} fontWeight="500">
                 Instagram
               </Typography>
             </Box>
           </FlexBetween>
-          <EditOutlined sx={{ color: main }} />
         </FlexBetween>
       </Box>
     </WidgetWrapper>
