@@ -24,6 +24,10 @@ const registerSchema = yup.object().shape({
   location: yup.string().required("required"),
   occupation: yup.string().required("required"),
   picture: yup.string().required("required"),
+  facebook: yup.string(),
+  twitter: yup.string(),
+  linkedin: yup.string(),
+  instagram: yup.string(),
 });
 
 const loginSchema = yup.object().shape({
@@ -39,6 +43,10 @@ const initialValuesRegister = {
   location: "",
   occupation: "",
   picture: "",
+  facebook: "",
+  twitter: "",
+  linkedin: "",
+  instagram: "",
 };
 
 const initialValuesLogin = {
@@ -206,6 +214,38 @@ const Form = () => {
                     )}
                   </Dropzone>
                 </Box>
+                <TextField
+                  label="Facebook"
+                  onBlur={handleBlur}
+                  onChange={handleChange}
+                  value={values.facebook}
+                  name="facebook"
+                  sx={{ gridColumn: "span 4" }}
+                />
+                <TextField
+                  label="Twitter"
+                  onBlur={handleBlur}
+                  onChange={handleChange}
+                  value={values.twitter}
+                  name="twitter"
+                  sx={{ gridColumn: "span 4" }}
+                />
+                <TextField
+                  label="LinkedIn"
+                  onBlur={handleBlur}
+                  onChange={handleChange}
+                  value={values.linkedin}
+                  name="linkedin"
+                  sx={{ gridColumn: "span 4" }}
+                />
+                <TextField
+                  label="Instagram"
+                  onBlur={handleBlur}
+                  onChange={handleChange}
+                  value={values.instagram}
+                  name="instagram"
+                  sx={{ gridColumn: "span 4" }}
+                />
               </>
             )}
 

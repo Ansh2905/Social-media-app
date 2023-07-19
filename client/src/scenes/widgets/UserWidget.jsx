@@ -41,6 +41,10 @@ const UserWidget = ({ userId, picturePath }) => {
     location,
     occupation,
     friends,
+    facebook,
+    twitter,
+    linkedin,
+    instagram,
   } = user;
 
   return (
@@ -99,9 +103,11 @@ const UserWidget = ({ userId, picturePath }) => {
           <FlexBetween gap="1rem">
             <img src="../assets/facebook.png" alt="facebook" height="30px"/>
             <Box>
-              <Typography color={main} fontWeight="500">
-                Facebook
-              </Typography>
+              <a href={facebook}>
+                <Typography color={main} fontWeight="500">
+                  Facebook
+                </Typography>
+              </a>
             </Box>
           </FlexBetween>
         </FlexBetween>
@@ -110,9 +116,11 @@ const UserWidget = ({ userId, picturePath }) => {
           <FlexBetween gap="1rem">
             <img src="../assets/twitter.png" alt="twitter" width="30px"/>
             <Box>
-              <Typography color={main} fontWeight="500">
-                Twitter
-              </Typography>
+              <a href={twitter}>
+                <Typography color={main} fontWeight="500">
+                  Twitter
+                </Typography>
+              </a>
             </Box>
           </FlexBetween>
         
@@ -122,9 +130,11 @@ const UserWidget = ({ userId, picturePath }) => {
           <FlexBetween gap="1rem">
             <img src="../assets/linkedin.png" alt="linkedin" width="30px"/>
             <Box>
-              <Typography color={main} fontWeight="500">
-                LinkedIn
-              </Typography>
+              <a href={linkedin}>
+                <Typography color={main} fontWeight="500">
+                  LinkedIn
+                </Typography>
+              </a>
             </Box>
           </FlexBetween>
         </FlexBetween>
@@ -133,9 +143,11 @@ const UserWidget = ({ userId, picturePath }) => {
           <FlexBetween gap="1rem">
             <img src="../assets/instagram.png" alt="instagram" width="30px"/>
             <Box>
-              <Typography color={main} fontWeight="500">
-                Instagram
-              </Typography>
+              <a href={instagram}>
+                <Typography color={main} fontWeight="500">
+                  Instagram
+                </Typography>
+              </a>
             </Box>
           </FlexBetween>
         </FlexBetween>

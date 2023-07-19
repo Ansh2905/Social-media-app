@@ -38,15 +38,6 @@ import {
       return null;
     }
   
-    const {
-      firstName,
-      lastName,
-      location,
-      occupation,
-      viewedProfile,
-      impressions,
-      friends,
-    } = user;
   
     return (
       <WidgetWrapper margin="0px">

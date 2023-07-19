@@ -39,23 +39,25 @@ const Friend = ({ friendId, name, subtitle, userPicturePath }) => {
   return (
     <FlexBetween>
       <FlexBetween gap="1rem">
-        <UserImage image={userPicturePath} size="55px" />
-        <Box
+      <Box
           onClick={() => {
             navigate(`/profile/${friendId}`);
             navigate(0);
           }}
+          sx={{
+            "&:hover": {
+              color: palette.primary.light,
+              cursor: "pointer",
+            },
+          }}
         >
+          <UserImage image={userPicturePath} size="55px" />
+        </Box>
+        <Box>
           <Typography
             color={main}
             variant="h5"
             fontWeight="500"
-            sx={{
-              "&:hover": {
-                color: palette.primary.light,
-                cursor: "pointer",
-              },
-            }}
           >
             {name}
           </Typography>
